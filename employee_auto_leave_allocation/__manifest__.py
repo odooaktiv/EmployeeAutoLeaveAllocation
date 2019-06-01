@@ -4,7 +4,7 @@
     'summary': """
        """,
     'version': '12.0.1.0.0',
-    'author': "AktivSoftware",
+    'author': "Aktiv Software",
     'website': "http://www.aktivsoftware.com",
     'category': 'Human Resources',
     'description': """
