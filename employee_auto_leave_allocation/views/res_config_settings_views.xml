@@ -23,7 +23,7 @@
                         <label for="holiday_status_id"/>
                         <div class="content-group">
                             <div class="mt16">
-                                 <field name="holiday_status_id" placeholder="Select Leave Type"/>
+                                 <field name="holiday_status_id" widget="many2many_tags" placeholder="Select Leave Type"/>
                             </div>
                         </div>
                     </div>

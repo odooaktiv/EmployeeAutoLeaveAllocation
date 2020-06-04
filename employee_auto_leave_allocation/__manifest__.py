@@ -3,7 +3,8 @@
     'name': "Employee Automatically Leave Allocation",
     'summary': """
        """,
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.0.1',
+    'license': "OPL-1",
     'author': "Aktiv Software",
     'website': "http://www.aktivsoftware.com",
     'category': 'Human Resources',
