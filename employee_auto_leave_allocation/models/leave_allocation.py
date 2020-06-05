@@ -24,17 +24,17 @@ class Employee(models.Model):
                 if employee.joining_date >= (leave_obj.validity_start) and employee.company_id.id == (conf_val.company_id.id):
                     leave_allocations = self.env['hr.leave.allocation'].search(
                         [('holiday_status_id', '=',leave_obj.id)])
-                    for leave_allocation in leave_allocations:
-                        allocation_dict = {
-                        'name': leave_allocation.name,
-                        'holiday_status_id':
-                        leave_allocation.holiday_status_id.id,
-                        'number_of_days':
-                        leave_allocation.number_of_days,
-                        'holiday_type': 'employee',
-                        'employee_id': employee.id,
-                        }
-                    new_allocation = self.env[
-                    'hr.leave.allocation'].create(allocation_dict)
-                    new_allocation.sudo().action_approve()
+                    if leave_allocations:    
+                        for leave_allocation in leave_allocations:
+                            allocation_dict = {
+                            'name': leave_allocation.name,
+                            'holiday_status_id':
+                            leave_allocation.holiday_status_id.id,
+                            'number_of_days':
+                            leave_allocation.number_of_days,
+                            'holiday_type': 'employee',
+                            'employee_id': employee.id,
+                            }
+                        new_allocation = self.env['hr.leave.allocation'].create(allocation_dict)
+                        new_allocation.sudo().action_approve()
         return employee
