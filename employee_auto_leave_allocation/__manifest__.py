@@ -7,7 +7,7 @@
     'license': "OPL-1",
     'author': "Aktiv Software",
     'website': "http://www.aktivsoftware.com",
-    'category': 'Human Resources',
+    'category': 'Generic Modules/Human Resources',
     'description': """
         This application controls the leave schedule of your company.
         And Allocate Leaves to newly added Employee.
